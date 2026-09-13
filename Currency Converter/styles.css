@@ -1,0 +1,48 @@
+:root {
+  --background: #F5F1E8;
+  --card: #FFFFFF;
+  --primary: #2F5D50;
+  --primary-dark: #24483E;
+  --text: #2D2D2D;
+  --secondary-text: #6B6B6B;
+  --border: #D9D3C7;
+  --accent: #D99A5B;
+}
+
+label,
+input,
+select {
+  display: block;
+}
+
+body {
+  background: #FFF3E0;
+  min-height: 100vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  background: #388E3C;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label,p,input {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input,select {
+  width: 90%;
+  height: 30px;
+  border-radius:3px;
+}
