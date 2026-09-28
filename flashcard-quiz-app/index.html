@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The FlashCard quiz app" />
+    <title>Flashcard Quiz</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div
+      id="flashcard-container"
+      class="bg-gray-900 w-[90%] h-64 my-8 mx-auto"
+    >
+      <h1 class="p-4 text-3xl font-semibold text-center">
+        Flash Card Quiz App
+      </h1>
+
+      <div
+        id="flashcard"
+        class="rounded-2xl flex justify-center items-center"
+        role="button"
+        tabindex="0"
+        aria-label="Flashcard. Click to reveal the answer."
+      >
+        <p id="questionText" class="text-2xl">
+          What is the capital of France?
+        </p>
+
+        <p id="questionAnswer" hidden class="text-2xl">
+          Paris
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="bg-gray-900 w-[90%] h-full my-8 mx-auto [&_*]:p-2"
+      id="flashcard-control"
+    >
+      <h2 class="text-xl font-semibold p-4">Manage Cards</h2>
+
+      <button
+        type="button"
+        id="delete-btn"
+        class="bg-blue-500 w-[90%] rounded-l hover:bg-blue-700"
+      >
+        Delete
+      </button>
+
+      <hr />
+
+      <div id="all-cards">
+        <h3>All Cards</h3>
+      </div>
+
+      <hr />
+
+      <h3>Add a New Card</h3>
+
+      <form id="entry-form" novalidate>
+        <label for="front-text" class="block">Front:</label>
+
+        <textarea
+          id="front-text"
+          placeholder="Enter your question..."
+        ></textarea>
+
+        <label for="back-text" class="block">Back:</label>
+
+        <textarea
+          id="back-text"
+          placeholder="Enter your answer..."
+        ></textarea>
+
+        <p id="note" role="alert"></p>
+
+        <button
+          type="submit"
+          class="bg-blue-500 w-[90%] rounded-l hover:bg-blue-700"
+          id="save-btn"
+        >
+          Save New Flash Card
+        </button>
+      </form>
+    </div>
+  </body>
+   <script src="index.ts"></script>
+</html>
