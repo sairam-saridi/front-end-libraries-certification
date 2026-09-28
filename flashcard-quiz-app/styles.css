@@ -1,0 +1,162 @@
+:root {
+  --black: #000000;
+  --rich-black: #010203;
+  --jet-black: #0a0a0a;
+  --onyx-black: #0f0f0f;
+  --dark-black: #111111;
+  --soft-black: #121212;
+  --eerie-black: #1b1b1b;
+  --charcoal-black: #212121;
+  --light-black: #2b2b2b;
+  --matte-black: #282828;
+  --smoky-black: #100c08;
+  --ink-black: #1c1c1c;
+  --off-black: #222222;
+  --gray-black: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-black);
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#flashcard-container {
+  border-radius: 20px;
+  padding-bottom: 10px;
+  min-height: 270px;
+}
+
+#flashcard {
+  background-color: var(--gray-black);
+  width: 90%;
+  min-height: 150px;
+  margin: 5px auto;
+  padding: 20px;
+  border: 2px solid #4b5563;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  overflow-wrap: anywhere;
+}
+
+#flashcard:hover {
+  background-color: #404040;
+}
+
+#flashcard.flipped {
+  background-color: #1e3a5f;
+  border-color: #60a5fa;
+  transform: scale(1.01);
+}
+
+#flashcard p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+#flashcard-control {
+  border-radius: 15px;
+  padding-bottom: 20px;
+}
+
+#delete-btn {
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button {
+  margin: 10px 20px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+button:focus-visible,
+#flashcard:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+textarea {
+  display: block;
+  background-color: var(--gray-black);
+  color: white;
+  width: 95%;
+  min-height: 90px;
+  margin: 5px 15px;
+  border: 1px solid #6b7280;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #b0b0b0;
+}
+
+textarea:focus {
+  outline: 2px solid #3b82f6;
+  border-color: #3b82f6;
+}
+
+form button {
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+#note {
+  color: #ff6b6b;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  min-height: 20px;
+}
+
+#all-cards button {
+  display: block;
+  background-color: #3b82f6;
+  width: 90%;
+  border-radius: 10px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+#all-cards button:hover {
+  background-color: #1d4ed8;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #555;
+  margin: 15px 10px;
+}
+
+@media (max-width: 600px) {
+  #flashcard-container,
+  #flashcard-control {
+    width: 95%;
+  }
+
+  #flashcard {
+    min-height: 140px;
+  }
+
+  #flashcard p {
+    font-size: 1.25rem;
+  }
+
+  textarea {
+    width: 90%;
+  }
+}
